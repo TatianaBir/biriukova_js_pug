@@ -3,7 +3,7 @@ html
     head
         meta(charset='utf-8')
         meta(http-equiv='X-UA-Compatible' content='IE=edge')
-        block title
+        title Stichery
 
         link(href='css/bootstrap.min.css' rel='stylesheet')
         link(href='css/style.css' type='text/css' rel='stylesheet')
@@ -19,18 +19,20 @@ html
                 .head-menu
                     nav
                         ul.menu
-                            li.menu-item
-                                a(href='home.html')
+                            li(data-contentNumber='home.html').menu-item
+                                a(href='#')
                                     p Home
-                            li.menu-item
-                                a(href='servise.html')
+                            li(data-contentNumber='servise.html').menu-item
+                                a(href='#')
                                     p Servises
-                            li.menu-item
-                                a(href='contact.html')
+                            li(data-contentNumber='contact.html').menu-item
+                                a(href='#')
                                     p Contact
                     p
                         i(aria-hidden='true').fa.fa-phone  +123 456 789
-        block content
+
+        div.myCont
+            include home
         .footer
             .footer-content
                 .footer-left.col-xs-12.col-sm-6.col-md-5.col-lg-5

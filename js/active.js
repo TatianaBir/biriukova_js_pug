@@ -1,14 +1,12 @@
 $(document).ready(function () {
-	    var location = window.location.href;
-	    var cur_url = location.split('/').pop();
-	 
-	    $('.menu-item').each(function () {
-	        var link = $(this).find('a').attr('href');
-	 
-	        if (cur_url == link)
-	        {
-	            $(this).addClass('active');
-	        }
-	    });
+
+		$('.menu').on('click', '.menu-item', function () {
+			var contentName = $(this).attr("data-contentNumber");
+            $('.menu-item').removeClass('active');
+            $('.myCont').load(contentName);
+            $(this).addClass('active');
+        });
 });
+
+
 	
